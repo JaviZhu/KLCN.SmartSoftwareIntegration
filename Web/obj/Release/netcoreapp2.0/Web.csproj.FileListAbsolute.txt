@@ -1,0 +1,14 @@
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Web.deps.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Web.runtimeconfig.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Web.runtimeconfig.dev.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Web.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Web.pdb
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.csproj.CoreCompileInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.AssemblyInfoInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.AssemblyInfo.cs
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.pdb
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.csprojResolveAssemblyReference.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Library.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\bin\Release\netcoreapp2.0\Library.pdb
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Web\obj\Release\netcoreapp2.0\Web.csproj.CopyComplete

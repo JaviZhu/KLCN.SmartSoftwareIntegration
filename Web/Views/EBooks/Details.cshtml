@@ -1,0 +1,57 @@
+﻿@model Web.Models.EBook
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>EBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Path)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Path)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datetime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datetime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

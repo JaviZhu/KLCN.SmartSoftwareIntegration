@@ -1,0 +1,10 @@
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\bin\Any CPU\Release\netcoreapp2.0\WebApp.deps.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\bin\Any CPU\Release\netcoreapp2.0\WebApp.runtimeconfig.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\bin\Any CPU\Release\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\bin\Any CPU\Release\netcoreapp2.0\WebApp.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\bin\Any CPU\Release\netcoreapp2.0\WebApp.pdb
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\obj\Any CPU\Release\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\obj\Any CPU\Release\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\obj\Any CPU\Release\netcoreapp2.0\WebApp.AssemblyInfo.cs
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\obj\Any CPU\Release\netcoreapp2.0\WebApp.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\WebApp\obj\Any CPU\Release\netcoreapp2.0\WebApp.pdb

@@ -1,0 +1,63 @@
+﻿@model Web.Models.EBook
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>EBook</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BookName" class="control-label"></label>
+                <input asp-for="BookName" class="form-control" />
+                <span asp-validation-for="BookName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label"></label>
+                <input asp-for="Picture" class="form-control" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Path" class="control-label"></label>
+                <input asp-for="Path" class="form-control" />
+                <span asp-validation-for="Path" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datetime" class="control-label"></label>
+                <input asp-for="Datetime" class="form-control" />
+                <span asp-validation-for="Datetime" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

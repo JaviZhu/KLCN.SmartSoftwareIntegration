@@ -1,0 +1,81 @@
+﻿@model Web.Models.KLHKG_PriceBook
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>KLHKG_PriceBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KLHKG_PriceBookID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KLHKG_PriceBookID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UniqueCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SKU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SKU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Currency)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Currency)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ListPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ListPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MgrPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MgrPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SDPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SDPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

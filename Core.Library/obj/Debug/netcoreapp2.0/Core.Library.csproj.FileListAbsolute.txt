@@ -1,0 +1,9 @@
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\bin\Debug\netcoreapp2.0\Core.Library.deps.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\bin\Debug\netcoreapp2.0\Core.Library.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\obj\Debug\netcoreapp2.0\Core.Library.csprojResolveAssemblyReference.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\obj\Debug\netcoreapp2.0\Core.Library.csproj.CoreCompileInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\obj\Debug\netcoreapp2.0\Core.Library.AssemblyInfoInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\obj\Debug\netcoreapp2.0\Core.Library.AssemblyInfo.cs
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\bin\Debug\netcoreapp2.0\Core.Library.pdb
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\obj\Debug\netcoreapp2.0\Core.Library.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Core.Library\obj\Debug\netcoreapp2.0\Core.Library.pdb

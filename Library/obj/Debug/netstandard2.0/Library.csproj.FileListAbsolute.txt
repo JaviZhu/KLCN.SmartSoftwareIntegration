@@ -1,0 +1,8 @@
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\bin\Debug\netstandard2.0\Library.deps.json
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\bin\Debug\netstandard2.0\Library.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\bin\Debug\netstandard2.0\Library.pdb
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\obj\Debug\netstandard2.0\Library.csproj.CoreCompileInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\obj\Debug\netstandard2.0\Library.AssemblyInfoInputs.cache
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\obj\Debug\netstandard2.0\Library.AssemblyInfo.cs
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\obj\Debug\netstandard2.0\Library.dll
+C:\Z_Disk\document\source\KLCN.SmartSoftwareIntegration\Library\obj\Debug\netstandard2.0\Library.pdb

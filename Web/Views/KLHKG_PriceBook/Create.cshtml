@@ -1,0 +1,82 @@
+﻿@model Web.Models.KLHKG_PriceBook
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>KLHKG_PriceBook</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="KLHKG_PriceBookID" class="control-label"></label>
+                <input asp-for="KLHKG_PriceBookID" class="form-control" />
+                <span asp-validation-for="KLHKG_PriceBookID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UniqueCode" class="control-label"></label>
+                <input asp-for="UniqueCode" class="form-control" />
+                <span asp-validation-for="UniqueCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustType" class="control-label"></label>
+                <input asp-for="CustType" class="form-control" />
+                <span asp-validation-for="CustType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SKU" class="control-label"></label>
+                <input asp-for="SKU" class="form-control" />
+                <span asp-validation-for="SKU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Currency" class="control-label"></label>
+                <input asp-for="Currency" class="form-control" />
+                <span asp-validation-for="Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qty" class="control-label"></label>
+                <input asp-for="Qty" class="form-control" />
+                <span asp-validation-for="Qty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListPrice" class="control-label"></label>
+                <input asp-for="ListPrice" class="form-control" />
+                <span asp-validation-for="ListPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MgrPrice" class="control-label"></label>
+                <input asp-for="MgrPrice" class="form-control" />
+                <span asp-validation-for="MgrPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SDPrice" class="control-label"></label>
+                <input asp-for="SDPrice" class="form-control" />
+                <span asp-validation-for="SDPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

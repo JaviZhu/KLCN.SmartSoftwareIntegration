@@ -1,0 +1,286 @@
+﻿@model IEnumerable<Web.Models.HardDisk>
+@{
+    ViewData["Title"] = "Hard Disk";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!-- DataTables -->
+<link href="~/dark_2/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link href="~/dark_2/assets/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="~/dark_2/assets/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="~/dark_2/assets/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="~/dark_2/assets/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Plugins css -->
+<link href="~/dark_2/assets/plugins/notifications/notification.css" rel="stylesheet">
+
+<link href="~/dark_2/assets/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+
+<link href="~/dark_2/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="~/dark_2/assets/css/core.css" rel="stylesheet" type="text/css">
+<link href="~/dark_2/assets/css/icons.css" rel="stylesheet" type="text/css">
+<link href="~/dark_2/assets/css/components.css" rel="stylesheet" type="text/css">
+<link href="~/dark_2/assets/css/pages.css" rel="stylesheet" type="text/css">
+<link href="~/dark_2/assets/css/menu.css" rel="stylesheet" type="text/css">
+<link href="~/dark_2/assets/css/responsive.css" rel="stylesheet" type="text/css">
+<script src="~/dark_2/assets/js/modernizr.min.js"></script>
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="pull-left page-title">Datatable</h4>
+                    <ol class="breadcrumb pull-right">
+                        <li><a href="#">Klueber</a></li>
+                        <li><a href="#">Tables</a></li>
+                        <li class="active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+
+
+                                        <form id="form1" method="post" enctype="multipart/form-data" asp-controller="HardDisks" asp-action="ImportExcel">
+                                            <div class="fileupload btn btn-purple waves-effect waves-light">
+                                                <span><i class="ion-upload m-r-5"></i>Choose File...</span>
+                                                <input class="upload" type="file" id="files" name="files" multiple />
+                                            </div>
+
+                                            <button class="btn btn-default waves-effect m-b-5" type="button" onclick="funSubmit(this)" style="margin-top:5px;">Submit</button><i id="i_ref" class="fa fa-spin fa-refresh" style="display:none;"></i>
+                                            <i class="md md-get-app" style="cursor:pointer" onclick="downdloadTemplate()"></i>
+
+                                        </form>
+                                    <td>
+                                    <td align="right">
+                                        <button class="btn btn-inverse waves-effect waves-light m-b-5" type="button" onclick="funDel()">Delete</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel-body">
+                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="60">
+                                            <div class="checkbox checkbox-single">
+                                                <input id="ckb_all" type="checkbox" onchange="funCheck(this)" />
+                                                <label></label>
+                                            </div>
+                                        </th>
+                                        <th>No.</th>
+                                        <th>Bar Code</th>
+                                        <th>Bank</th>
+                                        <th>Tag</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Create Date</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @{int row = 1; }
+                                    @foreach (var m in Model.ToList())
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox checkbox-single">
+                                                    <input type="checkbox" value="@m.BarCode" />
+                                                    <label></label>
+                                                </div>
+                                            </td>
+                                            <td>@row</td>
+                                            <td>@m.BarCode</td>
+                                            <td>@m.Bank</td>
+                                            <td>@m.Tag</td>
+                                            <td>@m.Category</td>
+                                            <td>@m.Date.Value.ToShortDateString()</td>
+                                            <td>@m.CreateDate.Value.ToShortDateString()</td>
+                                        </tr>
+                                        row++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Row -->
+
+
+        </div> <!-- container -->
+    </div> <!-- content -->
+    <footer class="footer text-right">
+        <label id="copyright"></label>
+    </footer>
+
+    <script>
+        var resizefunc = [];
+    </script>
+    <!-- jQuery  -->
+    <script src="~/dark_2/assets/js/jquery.min.js"></script>
+    <script src="~/dark_2/assets/js/bootstrap.min.js"></script>
+    <script src="~/dark_2/assets/js/detect.js"></script>
+    <script src="~/dark_2/assets/js/fastclick.js"></script>
+    <script src="~/dark_2/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/dark_2/assets/js/jquery.blockUI.js"></script>
+    <script src="~/dark_2/assets/js/waves.js"></script>
+    <script src="~/dark_2/assets/js/wow.min.js"></script>
+    <script src="~/dark_2/assets/js/jquery.nicescroll.js"></script>
+    <script src="~/dark_2/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="~/js/jquery.form.js"></script>
+
+    <!-- Datatables-->
+    <script src="~/dark_2/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/buttons.bootstrap.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/jszip.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/pdfmake.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/vfs_fonts.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/buttons.print.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/dataTables.keyTable.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/responsive.bootstrap.min.js"></script>
+    <script src="~/dark_2/assets/plugins/datatables/dataTables.scroller.min.js"></script>
+    <!-- Datatable init js -->
+    <script src="~/dark_2/assets/pages/datatables.init.js"></script>
+    <script src="~/dark_2/assets/js/jquery.app.js"></script>
+
+    <script src="~/dark_2/assets/plugins/notifyjs/dist/notify.min.js"></script>
+    <script src="~/dark_2/assets/plugins/notifications/notify-metro.js"></script>
+    <script src="~/dark_2/assets/plugins/notifications/notifications.js"></script>
+
+    <!-- Sweet-Alert  -->
+    <script src="~/dark_2/assets/plugins/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/dark_2/assets/pages/jquery.sweet-alert.init.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var menu = $("#hid_menu").val().split('-');
+            //$("#sidebar-menu").find("ul").find("li:eq(0)").find("a").removeClass();
+            //if (menu[1] == 1) {
+            //    $("#sidebar-menu").find("ul").find("li:eq(" + menu[0] + ")").find("a:eq(0)").removeClass().addClass("waves-effect waves-light subdrop");
+            //    $("#sidebar-menu").find("ul").find("li:eq(" + menu[0] + ")").find("ul").css("display", "block");
+            //    $("#sidebar-menu").find("ul").find("li:eq(" + menu[0] + ")").find("ul li:eq(" + menu[2] + ")").find("a").css("color", "#2b9ac9");
+            //} else
+            //    $("#sidebar-menu").find("ul").find("li:eq(" + menu[0] + ")").find("a").removeClass().addClass("waves-effect waves-light active");
+        });
+        TableManageButtons.init();
+        function downdloadTemplate() {
+            location.href = "/downfiles/Download?filename=wwwroot/assets/download/harddisk/Hard Disk Templete.xlsx";
+        }
+        function funSubmit(obj) {
+            $(obj).prop("disabled", true);
+            $("#i_ref").show();
+            $("#form1").ajaxSubmit({
+                success: function (data) {
+                    if (data.result == "Error") {
+                        $("#i_ref").hide();
+                        $(obj).prop("disabled", false);
+                        $.Notification.notify('error', 'top center', 'Upload Notification', data.info);
+                    }
+                    else {
+                        $("#i_ref").hide();
+                        swal({
+                            title: "Upload",
+                            text: data.info,
+                            type: "success"
+                        },
+                            function () {
+                                location.href = location.href;
+                            });
+                    }
+                }
+            });
+        }
+        function funCheck(obj) {
+            if ($(obj).prop('checked')) {
+                $("#datatable-buttons tbody").find("input[type=checkbox]").prop('checked', true);
+
+            }
+            else {
+                $("#datatable-buttons tbody").find("input[type=checkbox]").prop('checked', false);
+
+            }
+        }
+        function funDel() {
+            var cks = $("#datatable-buttons").find("input[type=checkbox]:checked");
+            if ($(cks).length == 0) {
+
+                $.Notification.notify('error', 'top center', 'Delete Notification', "Please choose delete items !");
+            }
+            else {
+                swal({
+                    title: "Are you sure?",
+                    text: "Your will not be able to recover this imaginary file!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Yes, delete it!",
+                    closeOnConfirm: false
+                },
+                    function () {
+                        var barcode = "all";
+                        if (!$("#ckb_all").prop("checked")) {
+                            barcode = "";
+                            var partial = $("#datatable-buttons tbody").find("input[type=checkbox]:checked");
+                            $.each(partial, function () {
+                                barcode += "'" + $(this).prop("value") + "',";
+                            });
+                        }
+                        $.ajax({
+                            url: "/HardDisks/DeleteMulitple",
+                            dataType: "json",
+                            async: true,
+                            data: "barcode=" + barcode,
+                            type: "post",
+                            success: function (data) {
+                                if (data.result == "Error") {
+                                    swal("Deleted!", data.info, "error");
+                                    //$.Notification.notify('error', 'top center', 'Delete Notification', data.info);
+                                } else {
+                                    swal({
+                                        title: "Deleted",
+                                        text: data.info,
+                                        type: "success"
+                                    },
+                                        function () {
+                                            location.href = location.href;
+                                        });
+                                    //$.Notification.notify('success', 'top center', 'Delete Notification', data.info);
+                                    
+                                }
+                            },
+                            complete: function () {
+                            },
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            }
+                        });
+                        //
+                    });
+
+
+            }
+        }
+    </script>
+</div>
